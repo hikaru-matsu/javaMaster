@@ -1,4 +1,4 @@
-package org.example;
+package org.example.chapter5;
 
 import java.util.Scanner;
 
@@ -22,5 +22,11 @@ public class introdeceOneself {
     System.out.println("干支を入力してください");
     Eto = scanner.next();
     System.out.println("名前:" + name + "," + "年齢:" + age + "身長:" + height + "干支:" + Eto);
+  }
+
+  public static void main(String[] args) {
+    introdeceOneself intro = new introdeceOneself();
+    intro.introduce();
+
   }
 }
