@@ -1,21 +1,28 @@
 package org.example.Object;
 
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+import org.example.Object.Chpter8Assign.Student;
+
 public class Main {
-
   public static void main(String[] args) {
+    Book book = new Book("このすば", "暁なつめ");
+    book.printInfo();
 
-    Red red = new Red();
-    red.name = "サンレッド";
-    red.hp = 1500;
+    Map<String ,Integer> map = new HashMap<>();
+    map.put("めぐみん",100);
+    map.put("かずま",59);
+    map.put("アクア",45);
+    map.put("ゆんゆん",90);
+    map.put("ダクネス",70);
 
-    Vamp vamp = new Vamp();
-    vamp.name = "ヴァンプ将軍";
+    Student student = new Student();
 
-    red.slip();
-
-    System.out.println("現れたな！" + red.name);
-
-    vamp.run();
+    map.forEach((name, score) -> {
+      String result = student.isPassed(score);
+      System.out.println(name + "さんは、" + result + "です。");
+    });
   }
-
 }
